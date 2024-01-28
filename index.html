@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="full">
+        <div class="container">
+
+            <div class="grid">
+                <div class="somatoria-card">
+                    <h5>Com tarefas para hoje:</h5>
+                    <p class="valor">0</p>
+
+                </div>
+                <div class="somatoria-card">
+                    <h5>Sem tarefas atribuidas:</h5>
+                    <p class="valor">0/0</p>
+                </div>
+                <div class="somatoria-card">
+                    <h5>Com tarefas atrasadas:</h5>
+                    <p class="valor">4 leads: R$300</p>
+                </div>
+                <div class="somatoria-card">
+                    <h5>Novo hoje/ontem:</h5>
+                    <p class="valor">4 leads: R$300</p>
+                </div>
+
+            </div>
+
+            <div class="grid header-kanban">
+                <div>
+                    <h5>CONTATO INICIAL</h5>
+                    <p><strong>R$250,00 </strong> <small>3 leads</small></p>
+                    <i class="fa-solid fa-plus add" onclick="opemDialog()"></i>
+                </div>
+                <div>
+                    <h5>DISCUSSÃO</h5>
+                    <p><strong>R$00,00 </strong> <small>0 leads</small></p>
+                    <i class="fa-solid fa-plus add" onclick="opemDialog()"></i>
+                </div>
+                <div>
+                    <h5>DISCUSSÃO REALIZADA</h5>
+                    <p><strong> R$00,00</strong> <small>0 leads</small></p>
+                    <i class="fa-solid fa-plus add" onclick="opemDialog()"></i>
+                </div>
+                <div>
+                    <h5>DISCUSSÃO DE CONTRATO</h5>
+                    <p><strong>R$00,00</strong> <small>0 leads</small></p>
+                    <i class="fa-solid fa-plus add" onclick="opemDialog()"></i>
+                </div>
+            </div>
+
+            <div class="kanban-grid">
+                <section class="column">
+                    <div draggable="true" class="item">
+                        <i class="fa-regular fa-user"></i>
+                        <span>card 4</span> <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </section>
+                <section class="column">
+                    <div draggable="true" class="item">
+                        <i class="fa-regular fa-user"></i>
+                        <span>card 1</span> <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div draggable="true" class="item">
+                        <i class="fa-regular fa-user"></i>
+                        <span>card 2</span> <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </section>
+                <section class="column">
+                    <div draggable="true" class="item">
+                        <i class="fa-regular fa-user"></i>
+                        <span>card 3</span> <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </section>
+                <section class="column">
+                    <div draggable="true" class="item">
+                        <i class="fa-regular fa-user"></i>
+                        <span>card 5</span> <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div draggable="true" class="item">
+                        <i class="fa-regular fa-user"></i>
+                        <span>card 6</span> <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div draggable="true" class="item">
+                        <i class="fa-regular fa-user"></i>
+                        <span>card 7</span> <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+    <dialog id="addItem">
+        <div class="kanban-card " draggable="false">
+            <form action="javascript:void(0)" method="POST">
+                <input type="text" placeholder="Nome:">
+                <input type="number" placeholder="Valor: $">
+                <input type="text" placeholder="Contato: Nome">
+                <input type="tel" placeholder="Conatato: Telefone">
+                <input type="email" placeholder="Contato: E-mail">
+                <input type="text" placeholder="Empresa: Nome">
+                <input type="text" placeholder="Empresa: Endereço">
+                <div>
+                    <button type="submit">ADICIONAR</button>
+                    <button type="reset" onclick="coseDialog()">CANCELAR</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

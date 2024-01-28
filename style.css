@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;0,900;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+body {
+    background-color: #FFF;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 48px;
+    background-image: linear-gradient(to bottom, #FFF, #f7f7f7);
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kanban-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.header-kanban>div {
+    background-color: #f7f7f7;
+    border-radius: 8px 8px 0 0;
+    padding: 16px;
+    border: 1px solid #EEE;
+    border-bottom: 0px solid #EEE;
+    display: grid;
+    text-align: center;
+    position: relative;
+}
+
+.header-kanban>div>h5 {
+    font-size: 14px;
+    color: #666;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.header-kanban>div>p {
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+
+    >strong {
+        font-size: 22px;
+        color: #013975;
+    }
+
+    >small {
+        font-size: 11px;
+        margin-left: 4px;
+    }
+}
+
+.kanban-grid>section {
+    background-color: #f7f7f7;
+    border-radius: 0 0 8px 8px;
+    padding: 8px;
+    border: 1px solid #EEE;
+    border-top: 0px solid #EEE;
+    display: grid;
+    gap: 8px;
+}
+
+.item {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 3px #0001;
+    background-color: #FFF;
+    border: 1px solid #EEE;
+    cursor: move;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item:hover {
+    border: 1px solid #007bff;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+
+
+.kanban-card {
+    background-color: #fff;
+    padding: 16px;
+    border: 1px solid #EEE;
+    border-radius: 8px;
+    box-shadow: 0 0 3px #0001;
+}
+
+.kanban-card form {
+    margin-top: 10px;
+    display: grid;
+    gap: 8px;
+}
+
+.kanban-card form label {
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #777;
+
+}
+
+.kanban-card form input {
+    width: 100%;
+    padding: 0 16px;
+    border: 1px solid #EEE;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    line-height: 32px;
+}
+
+.kanban-card button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.kanban-card button:hover {
+    filter: brightness(.9);
+}
+
+.kanban-card button[type="submit"] {
+    background-color: #007bff;
+    float: left;
+}
+
+.kanban-card button[type="reset"] {
+    background-color: #EEE;
+    color: #CCC;
+    float: right;
+}
+
+
+.somatoria-card {
+    background-color: #f7f7f7;
+    padding: 36px 16px;
+    border: 1px solid #EEE;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.somatoria-card h5 {
+    margin-top: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: #777;
+}
+
+.somatoria-card .valor {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.add {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    color: #007bff;
+}
+
+#addItem {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: 90vw;
+    border-radius: 8px;
+    box-shadow: 0 0 7px #0001;
+}
+
+::backdrop {
+
+    background-color: #000;
+    opacity: 0.5;
+    backdrop-filter: blur(5px);
+}
